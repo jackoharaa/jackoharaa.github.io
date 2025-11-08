@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jack O'Hara</title>
+  <link rel="icon" type="image/x-icon" href="./ico.png">
+
+  <style>
+    body {
+      background-color: #f8f8f8;
+      color: #000;
+      font-family: 'Courier New', monospace;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+    .content {
+      max-width: 600px;
+      width: 100%;
+      line-height: 1.2;
+    }
+    h1 {
+      font-size: 18px;
+      font-weight: normal;
+      margin-bottom: 0.3em;
+      text-align: center;
+    }
+    .details {
+      text-align: left;
+      line-height: 1.4;
+      margin-bottom: 2em;
+    }
+    .details p {
+      margin: 0 0 0.4em 0;
+      text-indent: -1.1em;
+      padding-left: 1.6em;
+    }
+    hr {
+      border: 0;
+      border-top: 1px solid #ccc;
+      margin: 1.2em 0;
+    }
+    .toggle {
+      text-align: center;
+      cursor: pointer;
+      font-size: 20px;
+      user-select: none;
+      transition: 0.2s;
+    }
+    .toggle:hover {
+      opacity: 0.7;
+    }
+    .photos {
+      display: none;
+      margin-top: 20px;
+    }
+    .photo {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .photo img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+      visibility: hidden; /* Hide until loaded */
+    }
+    .photo img.loaded {
+      visibility: visible;
+    }
+    .caption {
+      font-size: 12px;
+      opacity: 0.8;
+      margin-top: 4px;
+    }
+    a {
+      color: blue;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 20px;
+      }
+      .content {
+        max-width: 100%;
+      }
+      .details {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>Jack O'Hara</h1>
+    <div class="details">
+      <p>* based in NYC</p>
+      <p>* senior engineer building reliable data platforms and distributed systems</p>
+      <p>* interested in lakehouse design, query engines, performance at scale, and practical data solutions</p>
+      <p>* <a href="https://au.linkedin.com/in/jack-o-hara-394066b8" target="_blank">linkedin.com/in/jack-o-hara-394066b8</a></p>
+    </div>
+
+    <hr />
+
+    <div class="toggle" onclick="togglePhotos(this)">📷</div>
+
+    <div class="photos">
+      <div class="photo">
+        <img data-src="assets/01.jpg" />
+        <div class="caption">01.jpg</div>
+      </div>
+
+      <hr />
+
+      <div class="photo">
+        <img data-src="assets/02.jpg" />
+        <div class="caption">02.jpg</div>
+      </div>
+
+      <hr />
+
+      <div class="photo">
+        <img data-src="assets/03.jpg" />
+        <div class="caption">03.jpg</div>
+      </div>
+
+      <hr />
+
+      <div class="photo">
+        <img data-src="assets/04.jpg" />
+        <div class="caption">04.jpg</div>
+      </div>
+
+      <hr />
+
+      <div class="photo">
+        <img data-src="assets/05.jpg" />
+        <div class="caption">05.jpg</div>
+      </div>
+
+      <hr />
+
+      <div class="photo">
+        <img data-src="assets/08.jpg" />
+        <div class="caption">08.jpg</div>
+      </div>
+
+      <hr />
+
+      <div class="photo">
+        <img data-src="assets/09.jpg" />
+        <div class="caption">09.jpg</div>
+      </div>
+
+      <hr />
+
+      <div class="photo">
+        <img data-src="assets/011.jpg" />
+        <div class="caption">011.jpg</div>
+      </div>
+
+      <hr />
+
+      <div class="photo">
+        <img data-src="assets/012.jpg" />
+        <div class="caption">012.jpg</div>
+      </div>
+
+      <hr />
+
+      <div class="photo">
+        <img data-src="assets/014.jpg" />
+        <div class="caption">014.jpg</div>
+      </div>
+
+      <hr />
+
+      <div class="photo">
+        <img data-src="assets/015.jpg" />
+        <div class="caption">015.jpg</div>
+      </div>
+
+      <hr />
+
+      <div class="photo">
+        <img data-src="assets/016.jpg" />
+        <div class="caption">016.jpg</div>
+      </div>
+
+      <hr />
+
+      <div class="photo">
+        <img data-src="assets/017.jpg" />
+        <div class="caption">017.jpg</div>
+      </div>
+
+      <hr />
+
+      <div class="photo">
+        <img data-src="assets/018.jpg" />
+        <div class="caption">018.jpg</div>
+      </div>
+
+      <hr />
+
+      <div class="photo">
+        <img data-src="assets/020.jpg" />
+        <div class="caption">020.jpg</div>
+      </div>
+
+      <hr />
+
+      <div class="photo">
+        <img data-src="assets/023.jpg" />
+        <div class="caption">023.jpg</div>
+      </div>
+
+      <hr />
+
+      <div class="photo">
+        <img data-src="assets/024.jpg" />
+        <div class="caption">024.jpg</div>
+      </div>
+
+      <hr />
+
+      <div class="photo">
+        <img data-src="assets/025.jpg" />
+        <div class="caption">25.jpg</div>
+      </div>
+
+      <hr />
+
+      <div class="photo">
+        <img data-src="assets/027.jpg" />
+        <div class="caption">027.jpg</div>
+      </div>
+
+      <hr />
+
+      <div class="photo">
+        <img data-src="assets/028.jpg" />
+        <div class="caption">028.jpg</div>
+      </div>
+
+      <hr />
+
+      <div class="photo">
+        <img data-src="assets/029.jpg" />
+        <div class="caption">029.jpg</div>
+      </div>
+
+      <hr />
+
+      <div class="photo">
+        <img data-src="assets/030.jpg" />
+        <div class="caption">030.jpg</div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    loadImagesInOrder(section);
+
+    function togglePhotos(button) {
+      const section = document.querySelector('.photos');
+      if (section.style.display === 'block') {
+        section.style.display = 'none';
+        button.textContent = '📷';
+      } else {
+        section.style.display = 'block';
+        button.textContent = '📸';
+        loadImagesInOrder(section);
+      }
+    }
+
+    function loadImagesInOrder(section) {
+      const imgs = Array.from(section.querySelectorAll('img[data-src]'));
+      const loadNext = (i) => {
+        if (i >= imgs.length) return;
+        const img = imgs[i];
+        img.addEventListener('load', () => {
+          img.classList.add('loaded');
+          loadNext(i + 1);
+        }, { once: true });
+        img.addEventListener('error', () => loadNext(i + 1), { once: true });
+        img.src = img.getAttribute('data-src');
+        img.removeAttribute('data-src');
+      };
+      loadNext(0);
+    }
+  </script>
+</body>
+</html>
