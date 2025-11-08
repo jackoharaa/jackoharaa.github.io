@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jack O'Hara</title>
-  <link rel="icon" type="image/x-icon" href="./ico.png">
+  <link rel="icon" type="image/x-icon" href="./icon.png">
 
   <style>
     body {
@@ -107,7 +107,7 @@
 
     <hr />
 
-    <div class="toggle" onclick="togglePhotos(this)">📷</div>
+    <div class="toggle" onclick="togglePhotos(this)">+</div>
 
     <div class="photos">
       <div class="photo">
@@ -272,10 +272,10 @@
       const section = document.querySelector('.photos');
       if (section.style.display === 'block') {
         section.style.display = 'none';
-        button.textContent = '📷';
+        button.textContent = '+';
       } else {
         section.style.display = 'block';
-        button.textContent = '📸';
+        button.textContent = '-';
         loadImagesInOrder(section);
       }
     }
